@@ -10,4 +10,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
+  resources :users do
+    resources :packages, only: [:create]
+  end
 end
