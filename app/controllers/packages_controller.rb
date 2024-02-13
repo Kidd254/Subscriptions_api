@@ -1,4 +1,6 @@
 class PackagesController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     user = User.find(params[:user_id])
     selected_packages = packages_params[:selectedPackages]

@@ -1,5 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!
   include RackSessionFix
 
   respond_to :json
