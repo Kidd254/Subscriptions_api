@@ -27,11 +27,4 @@ class Users::SessionsController < Devise::SessionsController
       }, status: :unauthorized
     end
   end
-
-  private
-
-  # Strong parameters for user login
-  def sign_in_params
-    params.require(:user).permit(:email, :password)
-  end
 end
