@@ -4,8 +4,6 @@ class User < ApplicationRecord
 
 validates :email, presence: true
 validates :password, presence: true
-validates :phone_number, presence: true
-  validates :name, presence: true
 
 
   devise :database_authenticatable, :registerable, :validatable,
